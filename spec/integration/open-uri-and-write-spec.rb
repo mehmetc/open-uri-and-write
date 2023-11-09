@@ -100,11 +100,11 @@ describe "OpenUriAndWrite" do
     # timestamp = Time.now.to_s
     webdav_url = @base_uri + 'new_test_folder'
     Dir.mkdir(webdav_url)
-    File.exists?(webdav_url).should == true
+    File.exist?(webdav_url).should == true
 
     Dir.rmdir(webdav_url)
     # There seems to be a bug in our testserver that prevent it from deleting files
-    # File.exists?(webdav_url).should == false
+    # File.exist?(webdav_url).should == false
   end
 
   # TODO Test this in a separate script just to be sure
@@ -191,7 +191,7 @@ describe "OpenUriAndWrite" do
 
   after(:each) do
     url = @base_uri + 'webdav_test.txt'
-    if(File.exists?(url))
+    if(File.exist?(url))
       File.delete(url)
     end
   end

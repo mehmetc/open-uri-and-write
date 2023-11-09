@@ -5,6 +5,7 @@ module OpenUriAndWrite
   class Handle < StringIO
 
     alias_method :original_puts, :puts
+    alias :write :puts
     attr_accessor :dav, :filemode
 
     def initialize(url, rest)

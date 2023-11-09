@@ -12,11 +12,11 @@ Gem::Specification.new do |s|
   s.summary     = %q{An easy to use wrapper for Net::Dav, for writing files to WebDAV enabled web servers.}
   s.description = %q{Use normal file operations to write files to WebDAV enabled web servers.}
 
-  s.add_runtime_dependency "highline", "~>1.6.9"
-  s.add_runtime_dependency "net_dav", "~>0.5.0"
-  s.add_development_dependency "rspec", "~>2.5.0"
-  s.add_development_dependency "pry", "~>0.9.8.4"
-  s.add_development_dependency "dav4rack", "~>0.2.10" 
+  s.add_runtime_dependency "highline", "~>2.1.0"
+  s.add_runtime_dependency "net_dav", "~>0.5.1"
+  s.add_development_dependency "rspec", "~>3.12.0"
+  s.add_development_dependency "pry", "~>0.14.2"
+  s.add_development_dependency "dav4rack", "~>0.3"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

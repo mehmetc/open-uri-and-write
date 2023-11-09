@@ -5,15 +5,15 @@ class File
   class << self
     alias original_delete delete
     alias original_open open
-    alias original_exists? exists?
+    alias original_exist? exist?
   end
 
-  def self.exists?(name)
+  def self.exist?(name)
     if(name[/https?:\/\//])
       dav = OpenUriAndWrite::CredentialsStore.get_connection_for_url(name)
-      dav.exists?(name)
+      dav.exist?(name)
     else
-      self.original_exists?(name)
+      self.original_exist?(name)
     end
   end
 
