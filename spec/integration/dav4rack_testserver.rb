@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'dav4rack'
-require 'dav4rack/file_resource'
+require 'dav4rack/resource'
 # require 'unicorn'
 require 'pathname'
 
@@ -32,7 +32,7 @@ class DAV4Rack::Controller
 end
 
 # Custom DAV4Rack resourceclass to handle PROPPATCH
-class MyResource < DAV4Rack::FileResource
+class MyResource < DAV4Rack::Resource
 
   def property_names
     super << 'publish-date'

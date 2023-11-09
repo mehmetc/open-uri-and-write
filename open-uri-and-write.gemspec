@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/thomasfl/open-uri-and-write"
   s.summary     = %q{An easy to use wrapper for Net::Dav, for writing files to WebDAV enabled web servers.}
   s.description = %q{Use normal file operations to write files to WebDAV enabled web servers.}
+  s.license     = nil
 
   s.add_runtime_dependency "highline", "~>2.1.0"
   s.add_runtime_dependency "net_dav", "~>0.5.1"
